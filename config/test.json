@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": 3000
+  },
+  "logger": {
+    "levels": [
+      "DEBUG",
+      "ERROR",
+      "INFO",
+      "WARN"
+    ]
+  }
+}

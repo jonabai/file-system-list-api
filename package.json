@@ -1,0 +1,92 @@
+{
+  "name": "file-system-list-api",
+  "version": "1.0.0",
+  "description": "File system listing API",
+  "main": "dist/bin/app.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint . --fix --ext .js,.ts",
+    "lint:nofix": "eslint . --ext .js,.ts",
+    "start": "ts-node-dev bin/app.ts",
+    "test": "cross-env NODE_ENV=test jest --config ./jest.config.js --runInBand --no-cache",
+    "test:unit": "cross-env NODE_ENV=test jest --config jest.config.unit.js",
+    "test:unit:watch": "cross-env NODE_ENV=test jest --config jest.config.unit.js --watch",
+    "test:integration": "cross-env NODE_ENV=test jest --config ./jest.config.integration.js --runInBand",
+    "test:integration:watch": "npm run test:integration -- --watch",
+    "test:e2e": "cross-env NODE_ENV=test jest --config ./jest.config.e2e.js --runInBand --no-cache",
+    "test:e2e:watch": "npm run test:e2e -- --watch --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonabai/file-system-list-api.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "TypeScript",
+    "GraphQL",
+    "Koa"
+  ],
+  "author": "jonabai",
+  "bugs": {
+    "url": "https://github.com/jonabai/file-system-list-api/issues"
+  },
+  "homepage": "https://github.com/jonabai/file-system-list-api#readme",
+  "license": "MIT",
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "standardx": {
+    "env": [
+      "jest"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
+  },
+  "devDependencies": {
+    "@types/config": "0.0.36",
+    "@types/jest": "^25.1.4",
+    "@types/koa": "^2.11.2",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.4.0",
+    "@types/node-fetch": "^2.5.10",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^26.6.3",
+    "jest-extended": "^0.11.5",
+    "nock": "^12.0.3",
+    "prettier": "^2.0.4",
+    "timekeeper": "^2.2.0",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^8.7.0",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "@types/node": "^14.14.41",
+    "@types/ws": "^7.4.1",
+    "apollo-server-koa": "^1.4.0",
+    "config": "^3.3.1",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^8.0.8",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.1",
+    "uuid": "^8.3.2"
+  }
+}

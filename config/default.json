@@ -1,0 +1,19 @@
+{
+  "server": {
+    "port": 3000,
+    "cors": {
+      "origin": ""
+    }
+  },
+  "logger": {
+    "levels": [
+      "DEBUG",
+      "ERROR",
+      "INFO",
+      "WARN"
+    ]
+  },
+  "application": {
+    "rootFolder": "./tests/resources"
+  }
+}
