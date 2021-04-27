@@ -2,6 +2,7 @@
 
 This repository contains sources of the File System Listing API. 
 It is an HTTP GraphQL API that exposes the interface to list files in a file system folder.
+
 It follows the Clean Architecture principles and has 100% of test code coverage.
 
 ## Getting started (< 2mn)
@@ -20,13 +21,21 @@ In a browser, open [http://localhost:3000/graphiql](http://localhost:3000/graphi
 
 ```
 docker build --tag file-system-list-api .
-docker run -p 3000:3000 -v /home/ubuntu:/exposed-folder --name file-system-list-api -dit file-system-list-api
+docker run -p 3000:3000 --name file-system-list-api -dit file-system-list-api
 ```
 
 In a browser, open [http://localhost:3000/graphiql](http://localhost:3000/graphiql).
 
 The docker container exposes port 3000. Also exposes the volume /exposed-folder. 
 This folder will act as root folder for the application.
+
+Just for testing, the container will generate 9999 files in the internal folder /exposed-folder.
+
+To map the volume to a local folder  /home/ubuntu:
+
+```
+docker run -p 3000:3000 -v /home/ubuntu:/exposed-folder --name file-system-list-api -dit file-system-list-api
+```
 
 ## GraphQL example query
 In a browser, open [http://localhost:3000/graphiql](http://localhost:3000/graphiql).

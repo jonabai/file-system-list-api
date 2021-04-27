@@ -18,14 +18,12 @@
     "strict": true,
     "target": "ES2015",
     "typeRoots": [
-      "./node_modules/@types",
-      "./src/shared"
+      "./node_modules/@types"
     ],
     "resolveJsonModule": true
   },
   "include": [
     "./bin/*",
-    "./migrations/**/*",
     "./src/**/*",
     "./test/**/*"
   ],
